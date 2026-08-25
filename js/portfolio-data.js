@@ -23,8 +23,8 @@ const PORTFOLIO_DATA = {
     currentCity: "Nagercoil / Virudhunagar, India",
     linkedin: "https://www.linkedin.com/in/gopikirans",
     linkedinHandle: "linkedin.com/in/gopikirans",
-    github: "https://github.com/gopikirans",
-    githubHandle: "github.com/gopikirans",
+    github: "https://github.com/gopikiran14",
+    githubHandle: "github.com/gopikiran14",
     availability: "Available for Full-time Roles & High-Impact Opportunities",
     statusBadge: "Open to Work / Immediate Joiner",
     bio: "Software Developer with proven experience in building scalable enterprise applications using Angular, Spring Boot, Python, and SQL technologies. Highly skilled in full-stack development, REST APIs, real-time edge computer vision systems, and enterprise workflow automation with hands-on experience in enterprise platforms and AI-powered applications.",
@@ -136,7 +136,7 @@ const PORTFOLIO_DATA = {
       },
       links: {
         demo: "#",
-        github: "https://github.com/gopikirans"
+        github: "https://github.com/gopikiran14"
       }
     },
     {
@@ -163,7 +163,7 @@ const PORTFOLIO_DATA = {
       },
       links: {
         demo: "#",
-        github: "https://github.com/gopikirans"
+        github: "https://github.com/gopikiran14"
       }
     },
     {
@@ -191,7 +191,7 @@ const PORTFOLIO_DATA = {
       },
       links: {
         demo: "#",
-        github: "https://github.com/gopikirans"
+        github: "https://github.com/gopikiran14"
       }
     },
     {
@@ -218,7 +218,7 @@ const PORTFOLIO_DATA = {
       },
       links: {
         demo: "#",
-        github: "https://github.com/gopikirans"
+        github: "https://github.com/gopikiran14"
       }
     },
     {
@@ -246,7 +246,7 @@ const PORTFOLIO_DATA = {
       },
       links: {
         demo: "#",
-        github: "https://github.com/gopikirans"
+        github: "https://github.com/gopikiran14"
       }
     },
     {
