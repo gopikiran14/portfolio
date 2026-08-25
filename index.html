@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="cosmic">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary SEO Meta Tags -->
+  <title>Gopikiran S | Software Engineer & Full Stack Developer</title>
+  <meta name="title" content="Gopikiran S | Software Engineer & Full Stack Developer">
+  <meta name="description" content="Portfolio of Gopikiran S — Software Engineer & Full Stack Developer specializing in Angular, Spring Boot, Python, RT-DETR Computer Vision, and Enterprise Workflow Automation.">
+  <meta name="keywords" content="Gopikiran S, Software Engineer, Full Stack Developer, Angular, Spring Boot, Python, RT-DETR, Computer Vision, FastAPI, MySQL, Portfolio, Resume">
+  <meta name="author" content="Gopikiran S">
+  <meta name="theme-color" content="#090a10">
+
+  <!-- Open Graph / Facebook / LinkedIn -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Gopikiran S | Software Engineer & Full Stack Developer">
+  <meta property="og:description" content="Explore enterprise platforms, real-time AI computer vision pipelines, and full-stack software built by Gopikiran S.">
+  
+  <!-- FontAwesome & DevIcons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+  
+  <!-- Custom Stylesheets -->
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/terminal.css">
+  <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+
+  <!-- Interactive Particle Background Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <div class="site-wrapper">
+    
+    <!-- NAVIGATION BAR -->
+    <header class="navbar" id="main-nav">
+      <div class="container nav-container">
+        <a href="#hero" class="nav-brand" id="brand-logo">
+          <div class="brand-logo-icon">GS</div>
+          <span>Gopikiran<span class="highlight-cyan">.dev</span></span>
+        </a>
+
+        <ul class="nav-links" id="nav-links-wrap">
+          <li><a href="#hero" class="nav-link active">Home</a></li>
+          <li><a href="#about" class="nav-link">About & Skills</a></li>
+          <li><a href="#projects" class="nav-link">Projects</a></li>
+          <li><a href="#terminal" class="nav-link">CLI Terminal</a></li>
+          <li><a href="#experience" class="nav-link">Experience</a></li>
+          <li><a href="#education" class="nav-link">Education</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+
+        <div class="nav-controls">
+          <!-- Theme Switcher -->
+          <select id="theme-select" class="theme-select" title="Switch Theme">
+            <option value="cosmic">🌌 Cosmic</option>
+            <option value="cyber">⚡ Cyber</option>
+            <option value="matrix">💻 Matrix</option>
+            <option value="light">☀️ Light</option>
+          </select>
+
+          <!-- Audio Sound FX Toggle -->
+          <button id="audio-toggle-btn" class="nav-btn" title="Toggle Sound FX">
+            <i class="fas fa-volume-high"></i> <span class="nav-btn-text">Sound ON</span>
+          </button>
+
+          <!-- Quick Resume Modal Trigger -->
+          <button class="nav-btn open-resume-btn btn-glow-pulse" id="nav-resume-btn">
+            <i class="fas fa-file-lines"></i> <span class="nav-btn-text">Resume</span>
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="mobile-menu-btn" id="mobile-menu-toggle" aria-label="Toggle Navigation Menu">
+            <i class="fas fa-bars"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO SECTION -->
+      <section class="hero-section" id="hero">
+        <div class="container">
+          
+          <div class="hero-badge-row">
+            <div class="status-badge" id="hero-status-badge">
+              <span class="pulse-dot"></span>
+              <span>Available for Full-time Roles & High-Impact Opportunities</span>
+            </div>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Gopikiran S</span>
+          </h1>
+
+          <div class="hero-subtitle">
+            I build &amp; scale <span id="typewriter-text" class="highlight-cyan"></span><span class="cursor-blink">|</span>
+          </div>
+
+          <p class="hero-bio">
+            Software Developer experienced in engineering scalable enterprise applications with 
+            <strong class="highlight-cyan">Angular</strong>, <strong class="highlight-cyan">Spring Boot</strong>, and <strong class="highlight-cyan">Python</strong>. 
+            Passionate about architecting secure REST APIs, real-time edge computer vision pipelines (RT-DETR), and intelligent workflow automation.
+          </p>
+
+          <div class="hero-ctas">
+            <a href="#projects" class="btn-primary btn-glow-pulse" id="hero-view-work-btn">
+              <i class="fas fa-rocket"></i> View Featured Work
+            </a>
+            <button class="btn-secondary open-resume-btn" id="hero-resume-btn">
+              <i class="fas fa-file-pdf"></i> View &amp; Print Resume
+            </button>
+            <a href="#terminal" class="btn-secondary" id="hero-terminal-btn">
+              <i class="fas fa-terminal"></i> Open Terminal
+            </a>
+            <a href="#contact" class="btn-secondary" id="hero-contact-btn">
+              <i class="fas fa-paper-plane"></i> Get in Touch
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://www.linkedin.com/in/gopikirans" target="_blank" class="social-btn" title="LinkedIn Profile" id="hero-linkedin">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="https://github.com/gopikirans" target="_blank" class="social-btn" title="GitHub Profile" id="hero-github">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="mailto:gopikiran14062002@gmail.com" class="social-btn" title="Send Email" id="hero-email">
+              <i class="fas fa-envelope"></i>
+            </a>
+            <a href="tel:9363789859" class="social-btn" title="Call Direct" id="hero-phone">
+              <i class="fas fa-phone"></i>
+            </a>
+          </div>
+
+          <!-- Hero Metrics Cards -->
+          <div class="hero-metrics-grid" id="hero-metrics-container">
+            <!-- Dynamically populated from portfolio-data.js -->
+          </div>
+
+        </div>
+      </section>
+
+      <!-- ABOUT & SKILLS SECTION -->
+      <section class="section" id="about">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag"><i class="fas fa-user-astronaut"></i> Background &amp; Core Stack</span>
+            <h2 class="section-title">About Me &amp; <span class="gradient-text">Technical Skills</span></h2>
+            <p class="section-desc">A snapshot of my engineering background, core competencies, and technology stacks.</p>
+          </div>
+
+          <div class="about-grid">
+            <div class="about-card">
+              <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem;">Engineering Philosophy</h3>
+              <p>
+                I thrive at the intersection of robust enterprise backend architecture and responsive, reactive user interfaces. 
+                With practical industry experience in enterprise platforms, I specialize in transforming complex business workflows into high-performance, maintainable software.
+              </p>
+              <p>
+                From designing role-based REST APIs in <strong>Spring Boot</strong> and modular component architecture in <strong>Angular</strong>, 
+                to deploying real-time AI object detection with <strong>RT-DETR &amp; ONNX Runtime</strong>, I focus on performance, security, and clean code.
+              </p>
+              <div class="about-highlight-box">
+                <strong><i class="fas fa-location-dot highlight-cyan"></i> Based in Virudhunagar / Nagercoil, India</strong>
+                <span>Open for Onsite &amp; Global Remote Engineering Opportunities.</span>
+              </div>
+            </div>
+
+            <div class="about-card">
+              <h3 style="font-size: 1.4rem; font-weight: 700; margin-bottom: 1rem;">Core Competencies</h3>
+              <div style="display: flex; flex-direction: column; gap: 0.85rem;">
+                <div style="display: flex; gap: 0.8rem; align-items: flex-start;">
+                  <i class="fas fa-shield-halved highlight-cyan" style="font-size: 1.2rem; margin-top: 3px;"></i>
+                  <div>
+                    <strong>Enterprise Backend &amp; REST APIs</strong>
+                    <div style="font-size: 0.88rem; color: var(--text-secondary);">Spring Boot, FastAPI, MySQL, DTOs, Role-Based Access Controls (RBAC), and CI/CD pipelines.</div>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 0.8rem; align-items: flex-start;">
+                  <i class="fab fa-angular highlight-violet" style="font-size: 1.2rem; margin-top: 3px;"></i>
+                  <div>
+                    <strong>Reactive Modern Frontend</strong>
+                    <div style="font-size: 0.88rem; color: var(--text-secondary);">Angular 17+ (Signals, Standalone Components), TypeScript, Reactive Forms, and responsive UI design.</div>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 0.8rem; align-items: flex-start;">
+                  <i class="fas fa-brain highlight-green" style="font-size: 1.2rem; margin-top: 3px;"></i>
+                  <div>
+                    <strong>Edge AI &amp; Computer Vision</strong>
+                    <div style="font-size: 0.88rem; color: var(--text-secondary);">RT-DETR Transformer models, ONNX Runtime, OpenCV, live RTSP stream ingestion, and WebSockets.</div>
+                  </div>
+                </div>
+                <div style="display: flex; gap: 0.8rem; align-items: flex-start;">
+                  <i class="fas fa-robot highlight-cyan" style="font-size: 1.2rem; margin-top: 3px;"></i>
+                  <div>
+                    <strong>AI Agents &amp; Workflow Automation</strong>
+                    <div style="font-size: 0.88rem; color: var(--text-secondary);">Model Context Protocol (MCP), Groq LLM integration, ACRA SAP SD automation, and Jasper Reports.</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Interactive Skill Matrix Tabs -->
+          <div class="skills-tabs-wrap" id="skills-tabs">
+            <!-- Dynamically populated from portfolio-data.js -->
+          </div>
+
+          <!-- Skills Content Cards Grid -->
+          <div id="skills-content">
+            <!-- Dynamically populated from portfolio-data.js -->
+          </div>
+
+        </div>
+      </section>
+
+      <!-- PROJECTS SHOWCASE SECTION -->
+      <section class="section" id="projects">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag"><i class="fas fa-code-branch"></i> Engineering Showcase</span>
+            <h2 class="section-title">Featured <span class="gradient-text">Projects &amp; Systems</span></h2>
+            <p class="section-desc">Explore enterprise systems, real-time AI pipelines, and full-stack solutions built with production-grade rigor.</p>
+          </div>
+
+          <!-- Project Filter Bar -->
+          <div class="projects-filter-bar">
+            <button class="project-filter-btn active" data-filter="all">All Projects (6)</button>
+            <button class="project-filter-btn" data-filter="ai-ml">AI &amp; Computer Vision</button>
+            <button class="project-filter-btn" data-filter="fullstack">Enterprise Full-Stack</button>
+            <button class="project-filter-btn" data-filter="enterprise">Enterprise Automation</button>
+          </div>
+
+          <!-- Projects 3D Grid -->
+          <div class="projects-grid" id="projects-grid">
+            <!-- Dynamically populated from portfolio-data.js -->
+          </div>
+
+        </div>
+      </section>
+
+      <!-- INTERACTIVE CLI TERMINAL SECTION -->
+      <section class="terminal-section" id="terminal">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag"><i class="fas fa-terminal"></i> Command Line Interface</span>
+            <h2 class="section-title">Interactive <span class="gradient-text">Developer Terminal</span></h2>
+            <p class="section-desc">For technical recruiters and engineers — query my background, projects, or fast-track an interview via CLI.</p>
+          </div>
+
+          <div class="terminal-box" id="interactive-terminal">
+            <div class="terminal-bar">
+              <div class="terminal-dots">
+                <span class="t-dot t-dot-red"></span>
+                <span class="t-dot t-dot-yellow"></span>
+                <span class="t-dot t-dot-green"></span>
+              </div>
+              <div class="terminal-title">gopikiran@engineer: ~/portfolio (zsh)</div>
+              <div class="terminal-status"><i class="fas fa-circle" style="font-size: 8px;"></i> Live Session</div>
+            </div>
+
+            <div class="terminal-output">
+              <div class="term-line term-info">
+                <span>Welcome to Gopikiran's Interactive Shell v2.4.0 [x86_64-node-enterprise]</span>
+              </div>
+              <div class="term-line term-normal">
+                <span>Type <span class="highlight-cyan">'help'</span> for available commands, or click the quick command chips below.</span>
+              </div>
+            </div>
+
+            <form class="terminal-input-row">
+              <span class="terminal-prompt-label">gopikiran@dev:~$</span>
+              <input type="text" class="terminal-input" placeholder="Type a command (e.g. 'sudo hire-me', 'skills', 'projects', 'cat resume')..." autocomplete="off" spellcheck="false">
+            </form>
+
+            <div class="terminal-quick-chips">
+              <span class="quick-chips-label">Quick Commands:</span>
+              <button type="button" class="quick-cmd-btn" data-cmd="skills">skills</button>
+              <button type="button" class="quick-cmd-btn" data-cmd="projects">projects</button>
+              <button type="button" class="quick-cmd-btn" data-cmd="experience">experience</button>
+              <button type="button" class="quick-cmd-btn" data-cmd="cat resume">cat resume</button>
+              <button type="button" class="quick-cmd-btn" data-cmd="sudo hire-me">sudo hire-me</button>
+              <button type="button" class="quick-cmd-btn" data-cmd="contact">contact</button>
+              <button type="button" class="quick-cmd-btn" data-cmd="clear">clear</button>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- WORK EXPERIENCE SECTION -->
+      <section class="section" id="experience">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag"><i class="fas fa-briefcase"></i> Career Journey</span>
+            <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
+            <p class="section-desc">Demonstrated industry experience building production enterprise software and data validation frameworks.</p>
+          </div>
+
+          <div class="timeline-wrap" id="experience-timeline">
+            <!-- Dynamically populated from portfolio-data.js -->
+          </div>
+
+        </div>
+      </section>
+
+      <!-- EDUCATION & CERTIFICATIONS SECTION -->
+      <section class="section" id="education">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag"><i class="fas fa-graduation-cap"></i> Academic &amp; Credentials</span>
+            <h2 class="section-title">Education &amp; <span class="gradient-text">Certifications</span></h2>
+            <p class="section-desc">Academic background in Electronics &amp; Communication Engineering and certified full-stack specialization.</p>
+          </div>
+
+          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1.5rem;"><i class="fas fa-university highlight-cyan"></i> Formal Education</h3>
+          <div class="edu-grid" id="education-grid">
+            <!-- Dynamically populated from portfolio-data.js -->
+          </div>
+
+          <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1.5rem;"><i class="fas fa-certificate highlight-violet"></i> Professional Certifications</h3>
+          <div class="cert-grid" id="certifications-grid">
+            <!-- Dynamically populated from portfolio-data.js -->
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CONTACT SECTION -->
+      <section class="section" id="contact">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-tag"><i class="fas fa-paper-plane"></i> Get In Touch</span>
+            <h2 class="section-title">Let's Connect &amp; <span class="gradient-text">Build Together</span></h2>
+            <p class="section-desc">I am actively interviewing and open for full-time Software Engineer &amp; Full Stack roles.</p>
+          </div>
+
+          <div class="contact-grid">
+            
+            <!-- Left Column: Contact Cards -->
+            <div class="contact-info-col">
+              
+              <!-- Email Card -->
+              <div class="contact-card">
+                <div class="contact-card-left">
+                  <div class="contact-icon-box"><i class="fas fa-envelope"></i></div>
+                  <div>
+                    <span class="contact-meta-label">Email Address</span>
+                    <a href="mailto:gopikiran14062002@gmail.com" class="contact-meta-value">gopikiran14062002@gmail.com</a>
+                  </div>
+                </div>
+                <button class="copy-btn" data-copy="gopikiran14062002@gmail.com" title="Copy Email">
+                  <i class="far fa-copy"></i>
+                </button>
+              </div>
+
+              <!-- Phone Card -->
+              <div class="contact-card">
+                <div class="contact-card-left">
+                  <div class="contact-icon-box"><i class="fas fa-phone"></i></div>
+                  <div>
+                    <span class="contact-meta-label">Phone / Mobile</span>
+                    <a href="tel:9363789859" class="contact-meta-value">+91 9363789859</a>
+                  </div>
+                </div>
+                <button class="copy-btn" data-copy="9363789859" title="Copy Phone Number">
+                  <i class="far fa-copy"></i>
+                </button>
+              </div>
+
+              <!-- LinkedIn Card -->
+              <div class="contact-card">
+                <div class="contact-card-left">
+                  <div class="contact-icon-box"><i class="fab fa-linkedin-in"></i></div>
+                  <div>
+                    <span class="contact-meta-label">LinkedIn Profile</span>
+                    <a href="https://www.linkedin.com/in/gopikirans" target="_blank" class="contact-meta-value">linkedin.com/in/gopikirans</a>
+                  </div>
+                </div>
+                <a href="https://www.linkedin.com/in/gopikirans" target="_blank" class="copy-btn" title="Open LinkedIn">
+                  <i class="fas fa-arrow-up-right-from-square"></i>
+                </a>
+              </div>
+
+              <!-- Location & Timezone Card -->
+              <div class="location-widget">
+                <h4><i class="fas fa-globe highlight-cyan"></i> Location &amp; Local Time</h4>
+                <div style="font-size: 0.95rem; color: var(--text-secondary);">Virudhunagar / Nagercoil, Tamil Nadu, India</div>
+                <div class="clock-live" id="live-time-display">--:--:-- IST</div>
+                <div style="margin-top: 0.75rem; font-size: 0.85rem; color: var(--text-muted);">
+                  <i class="fas fa-briefcase"></i> Ready for Hybrid, On-site, or Remote teams worldwide.
+                </div>
+              </div>
+
+            </div>
+
+            <!-- Right Column: Interactive Direct Message Form -->
+            <div class="contact-form-card">
+              <h3 style="font-size: 1.3rem; font-weight: 700; margin-bottom: 1.25rem;">
+                <i class="fas fa-comment-dots highlight-cyan"></i> Send a Direct Message
+              </h3>
+              <form id="contact-form">
+                <div class="form-group">
+                  <label for="contact-name" class="form-label">Your Name / Recruiter Name *</label>
+                  <input type="text" id="contact-name" class="form-input" placeholder="e.g. John Doe" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-email" class="form-label">Your Email Address *</label>
+                  <input type="email" id="contact-email" class="form-input" placeholder="e.g. john@company.com" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-subject" class="form-label">Subject / Position *</label>
+                  <input type="text" id="contact-subject" class="form-input" placeholder="e.g. Software Engineer Role at [Company]" required>
+                </div>
+
+                <div class="form-group">
+                  <label for="contact-message" class="form-label">Message Details *</label>
+                  <textarea id="contact-message" class="form-textarea" placeholder="Tell me about the role, project, or schedule an interview..." required></textarea>
+                </div>
+
+                <button type="submit" class="btn-primary btn-glow-pulse" style="width: 100%; justify-content: center;" id="contact-submit-btn">
+                  <i class="fas fa-paper-plane"></i> Send Message via Email
+                </button>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-container">
+        <div class="footer-left">
+          <div style="font-weight: 800; font-size: 1.1rem; color: var(--text-primary);">GOPIKIRAN S</div>
+          <div class="footer-copy">&copy; 2026 Gopikiran S. All Rights Reserved. Engineered with precision.</div>
+        </div>
+        <div class="nav-controls">
+          <button class="nav-btn open-resume-btn"><i class="fas fa-file-pdf"></i> Resume</button>
+          <a href="#hero" class="nav-btn" title="Back to top"><i class="fas fa-arrow-up"></i> Top</a>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- ==========================================================================
+       CASE STUDY DEEP DIVE MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="case-study-modal">
+    <div class="modal-window">
+      <div class="modal-header-bar">
+        <div class="modal-title-text"><i class="fas fa-diagram-project highlight-cyan"></i> Architecture &amp; Engineering Case Study</div>
+        <button class="modal-close-btn" id="case-study-modal-close" aria-label="Close Case Study"><i class="fas fa-xmark"></i></button>
+      </div>
+      <div class="modal-content-body" id="case-study-modal-body">
+        <!-- Dynamically populated from portfolio-data.js -->
+      </div>
+    </div>
+  </div>
+
+  <!-- ==========================================================================
+       IN-BROWSER PRINTABLE RESUME MODAL
+       ========================================================================== -->
+  <div class="modal-backdrop" id="resume-modal">
+    <div class="modal-window" style="max-width: 900px;">
+      <div class="modal-header-bar">
+        <div class="modal-title-text"><i class="fas fa-file-pdf highlight-cyan"></i> Gopikiran S — Official Resume</div>
+        <div style="display: flex; gap: 0.5rem; align-items: center;">
+          <button class="btn-primary" id="print-resume-btn" style="padding: 0.4rem 0.85rem; font-size: 0.85rem;">
+            <i class="fas fa-print"></i> Print / Save PDF
+          </button>
+          <button class="modal-close-btn" id="resume-modal-close" aria-label="Close Resume"><i class="fas fa-xmark"></i></button>
+        </div>
+      </div>
+      <div class="modal-content-body">
+        <div id="resume-render-area">
+          <!-- Dynamically populated from portfolio-data.js -->
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CUSTOM TOAST CONTAINER -->
+  <div id="custom-toast"></div>
+
+  <!-- SCRIPTS -->
+  <script src="js/portfolio-data.js"></script>
+  <script src="js/audio.js"></script>
+  <script src="js/particles.js"></script>
+  <script src="js/terminal.js"></script>
+  <script src="js/main.js"></script>
+
+</body>
+</html>

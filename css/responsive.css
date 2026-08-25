@@ -1,0 +1,203 @@
+/* ==========================================================================
+   RESPONSIVE & PRINT MEDIA QUERIES
+   ========================================================================== */
+
+/* --- TABLET & SMALL LAPTOPS (< 1024px) --- */
+@media (max-width: 1024px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- MOBILE BREAKPOINT (< 768px) --- */
+@media (max-width: 768px) {
+  .navbar {
+    height: 64px;
+  }
+
+  .nav-links {
+    position: fixed;
+    top: 64px;
+    left: 0;
+    width: 100%;
+    background: var(--bg-surface-elevated);
+    border-bottom: 1px solid var(--border-color);
+    flex-direction: column;
+    padding: 1.5rem;
+    gap: 1.25rem;
+    box-shadow: var(--shadow-md);
+    transform: translateY(-150%);
+    opacity: 0;
+    pointer-events: none;
+    transition: all var(--transition-smooth);
+  }
+
+  .nav-links.active {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .nav-btn-text {
+    display: none;
+  }
+
+  .mobile-menu-btn {
+    display: block;
+  }
+
+  .hero-section {
+    padding-top: 100px;
+    padding-bottom: 40px;
+  }
+
+  .hero-title {
+    font-size: 2.2rem;
+    letter-spacing: -0.5px;
+  }
+
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+
+  .hero-bio {
+    font-size: 0.98rem;
+  }
+
+  .hero-metrics-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 0.75rem;
+  }
+
+  .metric-pill {
+    padding: 0.85rem 1rem;
+  }
+
+  .metric-val {
+    font-size: 1.15rem;
+  }
+
+  .section {
+    padding: 60px 0;
+  }
+
+  .section-title {
+    font-size: 1.8rem;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .timeline-wrap {
+    padding-left: 1.8rem;
+  }
+
+  .timeline-item .timeline-dot {
+    left: -1.8rem;
+  }
+
+  .timeline-card {
+    padding: 1.5rem;
+  }
+
+  .timeline-header {
+    flex-direction: column;
+  }
+
+  .timeline-meta {
+    align-items: flex-start;
+  }
+
+  .modal-window {
+    max-height: 95vh;
+  }
+
+  .modal-content-body {
+    padding: 1.25rem;
+  }
+
+  .resume-paper {
+    padding: 1.5rem 1rem;
+  }
+
+  .term-help-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* --- SMALL MOBILE (< 480px) --- */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.85rem;
+  }
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+  .hero-metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  .hero-ctas {
+    flex-direction: column;
+    width: 100%;
+  }
+  .hero-ctas .btn-primary, .hero-ctas .btn-secondary {
+    width: 100%;
+    justify-content: center;
+  }
+  .project-actions {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: flex-start;
+  }
+  .btn-case-study {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+/* --- PRINT MEDIA STYLES (For PDF / Printing Resume) --- */
+@media print {
+  body * {
+    visibility: hidden;
+  }
+  #resume-render-area, #resume-render-area * {
+    visibility: visible;
+  }
+  #resume-render-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    background: #fff !important;
+    color: #000 !important;
+  }
+  .modal-backdrop {
+    position: static;
+    background: none;
+    backdrop-filter: none;
+    padding: 0;
+  }
+  .modal-window {
+    max-width: 100%;
+    max-height: none;
+    border: none;
+    box-shadow: none;
+  }
+  .modal-header-bar {
+    display: none;
+  }
+  .resume-paper {
+    box-shadow: none;
+    padding: 0;
+  }
+}
