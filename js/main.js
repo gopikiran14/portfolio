@@ -25,10 +25,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
 function initDynamicFavicon() {
   const iconData = 'data:image/png;base64,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';
-  const existingLinks = document.querySelectorAll("link[rel*='icon']");
-  existingLinks.forEach(link => {
-    link.href = iconData;
-  });
+  const head = document.head || document.getElementsByTagName('head')[0];
+  document.querySelectorAll("link[rel*='icon']").forEach(el => el.remove());
+  
+  const link = document.createElement('link');
+  link.type = 'image/png';
+  link.rel = 'icon';
+  link.href = iconData;
+  head.appendChild(link);
+
+  const link2 = document.createElement('link');
+  link2.rel = 'shortcut icon';
+  link2.type = 'image/png';
+  link2.href = iconData;
+  head.appendChild(link2);
 }
 
 // ==========================================
