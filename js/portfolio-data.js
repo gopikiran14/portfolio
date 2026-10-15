@@ -34,7 +34,7 @@ const PORTFOLIO_DATA = {
       "My work spans across cutting-edge AI pipelines — including developing real-time edge computer vision monitoring systems using RT-DETR, ONNX Runtime, and WebSockets, as well as building custom MCP (Model Context Protocol) AI agents and enterprise automation tools."
     ],
     metrics: [
-      { label: "Production Projects", value: "6+", icon: "fa-rocket" },
+      { label: "Production Projects", value: "7+", icon: "fa-rocket" },
       { label: "Core Tech Stacks", value: "Full Stack & AI", icon: "fa-layer-group" },
       { label: "Enterprise Experience", value: "2 Roles", icon: "fa-briefcase" },
       { label: "Code Quality & Precision", value: "100%", icon: "fa-shield-halved" }
@@ -48,10 +48,10 @@ const PORTFOLIO_DATA = {
         name: "Languages",
         icon: "fa-code",
         skills: [
-          { name: "Python", level: 92, badge: "Advanced", icon: "fab fa-python" },
-          { name: "Java", level: 90, badge: "Advanced", icon: "fab fa-java" },
+          { name: "Java", level: 92, badge: "Advanced", icon: "fab fa-java" },
+          { name: "Python", level: 85, badge: "Proficient", icon: "fab fa-python" },
           { name: "TypeScript", level: 88, badge: "Proficient", icon: "fab fa-js" },
-          { name: "JavaScript (ES6+)", level: 90, badge: "Advanced", icon: "fab fa-js-square" },
+          { name: "JavaScript", level: 90, badge: "Advanced", icon: "fab fa-js-square" },
           { name: "SQL", level: 88, badge: "Proficient", icon: "fas fa-database" }
         ]
       },
@@ -75,7 +75,6 @@ const PORTFOLIO_DATA = {
         skills: [
           { name: "Spring Boot", level: 90, badge: "Advanced", icon: "fas fa-leaf" },
           { name: "FastAPI", level: 88, badge: "Proficient", icon: "fas fa-bolt" },
-          { name: "Flask", level: 85, badge: "Proficient", icon: "fas fa-flask" },
           { name: "REST API Architecture", level: 94, badge: "Expert", icon: "fas fa-network-wired" },
           { name: "Role-Based Security / Auth", level: 88, badge: "Proficient", icon: "fas fa-shield-alt" },
           { name: "DTO Design & Validation", level: 92, badge: "Expert", icon: "fas fa-check-double" }
@@ -141,7 +140,7 @@ const PORTFOLIO_DATA = {
     },
     {
       id: "enterprise-workforce-portal",
-      title: "Internal Application — Enterprise Workforce Portal",
+      title: "Enterprise workforce portal",
       category: "fullstack",
       categoryName: "Enterprise Full-Stack",
       badge: "Enterprise Platform",
@@ -170,7 +169,7 @@ const PORTFOLIO_DATA = {
       id: "crm-document-builder",
       title: "Sales Application — CRM & Document Builder",
       category: "enterprise",
-      categoryName: "Enterprise CRM & Automation",
+      categoryName: "Enterprise CRM",
       badge: "Enterprise CRM",
       featured: true,
       tagline: "High-productivity CRM and automated legal/sales document generator containerized with Docker.",
@@ -223,7 +222,7 @@ const PORTFOLIO_DATA = {
     },
     {
       id: "sap-sd-automation",
-      title: "SAP SD Workflow Automation",
+      title: "SAP SD & Fruitsy Workflow Automation(ACRA)",
       category: "enterprise",
       categoryName: "Process Automation",
       badge: "Automation",
@@ -274,7 +273,34 @@ const PORTFOLIO_DATA = {
       },
       links: {
         demo: "#",
-        github: "https://github.com/gopikirans"
+        github: "https://github.com/gopikiran14"
+      }
+    },
+    {
+      id: "salesforce-zoho-migration",
+      title: "Testing — 'Globus - Salesforce to Zoho CRM migration'",
+      category: "enterprise",
+      categoryName: "CRM QA & Migration",
+      badge: "Quality Assurance",
+      featured: false,
+      tagline: "Role-based authority testing, end-to-end CRM workflow validation, and Jira defect tracking during Salesforce to Zoho CRM migration.",
+      summary: "Executed end-to-end functional and role-based authority testing across multiple user roles in Zoho CRM during migration from Salesforce, tracking defects in Jira and conducting client alignment calls.",
+      techStack: ["Zoho CRM", "Salesforce", "Jira", "Role-Based Access", "Functional Testing", "Agile Collaboration"],
+      icon: "fa-vial-circle-check",
+      highlights: [
+        "Tested every end-to-end workflow in Zoho CRM during migration from Salesforce, ensuring complete process parity.",
+        "Verified multiple user roles with varied authority levels, guaranteeing strict adherence to role-based access and permissions.",
+        "Identified, raised, and tracked bugs and edge-case defects in Jira throughout all migration phases.",
+        "Conducted regular client discussion calls to clarify requirement doubts, resolve discrepancies, and ensure smooth delivery."
+      ],
+      caseStudy: {
+        problem: "Migrating enterprise customer relationship workflows from Salesforce to Zoho CRM required rigorous validation across varied user roles with distinct authorities to prevent permission leaks, workflow interruptions, and data discrepancies.",
+        architecture: "Salesforce Baseline Workflows ➔ Zoho CRM Migration Pipeline ➔ Role-Based Authority Verification Matrix ➔ Defect Logging & Lifecycle Tracking in Jira ➔ Client Review & Sign-Off Calls.",
+        impact: "Ensured zero critical permission defects at go-live, verified functional parity across all user roles, and accelerated client sign-off with clear defect resolution."
+      },
+      links: {
+        demo: "#",
+        github: "https://github.com/gopikiran14"
       }
     }
   ],
@@ -352,12 +378,20 @@ const PORTFOLIO_DATA = {
 
   certifications: [
     {
-      title: "Java Full-Stack Developer",
-      issuer: "Full-Stack Engineering Certification",
-      date: "Certified",
-      badge: "Verified Skill",
-      skills: ["Java OOP", "Spring Boot", "JavaScript", "React JS", "MySQL", "REST APIs"],
-      description: "Completed comprehensive training in Java OOP, Spring Boot, JavaScript, React JS, and MySQL, with practical exposure to developing scalable web applications and integrating backend services with relational databases."
+      title: "Extra Miler Award",
+      issuer: "Asir Technologies Private Limited",
+      date: "24/04/2026",
+      badge: "Honors & Award",
+      skills: ["Performance Appraisal System", "Rapid Tech Adoption", "ASIRites Enterprise Applications", "Sales Document Builder"],
+      description: "Recognized for outstanding contributions to the Performance Appraisal System, rapid adoption of new technologies, and contributions across ASIRites enterprise applications and the Sales Document Builder."
+    },
+    {
+      title: "Java Full-Stack Developer Certification",
+      issuer: "Greens Technologies, Chennai",
+      date: "01/12/2024",
+      badge: "Certified",
+      skills: ["Java OOP", "Spring Boot", "JavaScript", "ReactJS", "MySQL", "Backend & Database Integration"],
+      description: "Completed comprehensive training in Java OOP, Spring Boot, JavaScript, ReactJS, and MySQL, with practical exposure to developing scalable web applications and integrating backend services with relational databases."
     }
   ]
 };

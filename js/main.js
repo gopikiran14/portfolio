@@ -19,6 +19,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initScrollSpyAndNav();
   initCardTilt();
   initScrollReveal();
+  initFooterYear();
 });
 
 // ==========================================
@@ -26,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // ==========================================
 function initTypewriter() {
   const el = document.getElementById('typewriter-text');
+  const prefixEl = document.getElementById('typewriter-prefix');
   if (!el) return;
 
   const roles = PORTFOLIO_DATA.personal.roles;
@@ -34,8 +36,21 @@ function initTypewriter() {
   let isDeleting = false;
   let typingSpeed = 100;
 
+  function updatePrefix(role) {
+    if (!prefixEl) return;
+    const article = /^[AEIOUaeiou]/.test(role) ? 'an' : 'a';
+    prefixEl.textContent = `I am ${article}`;
+  }
+
+  // Set initial prefix
+  updatePrefix(roles[0]);
+
   function type() {
     const currentRole = roles[roleIdx];
+
+    if (!isDeleting && charIdx === 0) {
+      updatePrefix(currentRole);
+    }
 
     if (isDeleting) {
       el.textContent = currentRole.substring(0, charIdx - 1);
@@ -53,6 +68,7 @@ function initTypewriter() {
     } else if (isDeleting && charIdx === 0) {
       isDeleting = false;
       roleIdx = (roleIdx + 1) % roles.length;
+      updatePrefix(roles[roleIdx]);
       typingSpeed = 400; // Pause before typing next word
     }
 
@@ -73,6 +89,7 @@ function initThemeManager() {
     document.documentElement.setAttribute('data-theme', themeName);
     localStorage.setItem('portfolio_theme', themeName);
     if (themeSelect) themeSelect.value = themeName;
+    updateFaviconForTheme(themeName);
     if (window.soundEngine) window.soundEngine.playPop();
   };
 
@@ -83,6 +100,38 @@ function initThemeManager() {
       window.setTheme(e.target.value);
     });
   }
+}
+
+function updateFaviconForTheme(themeName) {
+  const themeGradients = {
+    cosmic: { c1: '#8b5cf6', c2: '#00f2fe' },
+    cyber:  { c1: '#ff007a', c2: '#00f0ff' },
+    matrix: { c1: '#00ff88', c2: '#00b4d8' },
+    light:  { c1: '#4f46e5', c2: '#7c3aed' }
+  };
+  const colors = themeGradients[themeName] || themeGradients.cosmic;
+
+  const svg = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+    <defs>
+      <linearGradient id="favGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+        <stop offset="0%" stop-color="${colors.c1}"/>
+        <stop offset="100%" stop-color="${colors.c2}"/>
+      </linearGradient>
+    </defs>
+    <rect x="4" y="4" width="92" height="92" rx="26" ry="26" fill="url(#favGrad)"/>
+    <rect x="5.5" y="5.5" width="89" height="89" rx="24.5" ry="24.5" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="2"/>
+    <g fill="none" stroke="#FFFFFF" stroke-width="9" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M 45 33 C 41 24.5 33.5 22.5 26 22.5 C 15.5 22.5 11 31.5 11 50 C 11 68.5 15.5 77.5 26 77.5 C 36 77.5 44 70 45 52 L 28 52"/>
+      <path d="M 87 34 C 83.5 25 76.5 22.5 67 22.5 C 57 22.5 53 28.5 53 36.5 C 53 49 87 45.5 87 64 C 87 73.5 80 77.5 68 77.5 C 58 77.5 53 72.5 49 64.5"/>
+    </g>
+    <circle cx="86" cy="23" r="3.2" fill="#FFFFFF"/>
+  </svg>`;
+
+  const faviconUrl = 'data:image/svg+xml,' + encodeURIComponent(svg);
+  const links = document.querySelectorAll("link[rel*='icon']");
+  links.forEach(l => {
+    l.href = faviconUrl;
+  });
 }
 
 // ==========================================
@@ -140,6 +189,13 @@ function initClock() {
 
   updateTime();
   setInterval(updateTime, 1000);
+}
+
+function initFooterYear() {
+  const yearEl = document.getElementById('current-year');
+  if (yearEl) {
+    yearEl.textContent = new Date().getFullYear();
+  }
 }
 
 // ==========================================
@@ -475,7 +531,6 @@ function initModals() {
   if (resumeModal) {
     resumeBtns.forEach(btn => {
       btn.addEventListener('click', () => {
-        renderResumeContent();
         resumeModal.classList.add('active');
         document.body.style.overflow = 'hidden';
         if (window.soundEngine) window.soundEngine.playPop();

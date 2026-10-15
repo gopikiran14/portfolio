@@ -5,25 +5,32 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
   <!-- Primary SEO Meta Tags -->
-  <title>Gopikiran S | Software Engineer & Full Stack Developer</title>
-  <meta name="title" content="Gopikiran S | Software Engineer & Full Stack Developer">
+  <title>Gopikiran S | SDE &amp; FSD</title>
+  <meta name="title" content="Gopikiran S | SDE &amp; FSD">
   <meta name="description" content="Portfolio of Gopikiran S — Software Engineer & Full Stack Developer specializing in Angular, Spring Boot, Python, RT-DETR Computer Vision, and Enterprise Workflow Automation.">
   <meta name="keywords" content="Gopikiran S, Software Engineer, Full Stack Developer, Angular, Spring Boot, Python, RT-DETR, Computer Vision, FastAPI, MySQL, Portfolio, Resume">
   <meta name="author" content="Gopikiran S">
   <meta name="theme-color" content="#090a10">
 
+  <!-- Favicon & Browser Tab Icons (Warm Sunset Signature Emblem) -->
+  <link rel="icon" type="image/svg+xml" href="assets/logo.svg?v=3.2">
+  <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png?v=3.2">
+  <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png?v=3.2">
+  <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png?v=3.2">
+  <link rel="shortcut icon" href="favicon.ico?v=3.2">
+
   <!-- Open Graph / Facebook / LinkedIn -->
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Gopikiran S | Software Engineer & Full Stack Developer">
+  <meta property="og:title" content="Gopikiran S | SDE &amp; FSD">
   <meta property="og:description" content="Explore enterprise platforms, real-time AI computer vision pipelines, and full-stack software built by Gopikiran S.">
   
   <!-- FontAwesome & DevIcons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
   
   <!-- Custom Stylesheets -->
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="css/terminal.css">
-  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/style.css?v=6.1">
+  <link rel="stylesheet" href="css/terminal.css?v=6.1">
+  <link rel="stylesheet" href="css/responsive.css?v=6.1">
 </head>
 <body>
 
@@ -34,9 +41,42 @@
     
     <!-- NAVIGATION BAR -->
     <header class="navbar" id="main-nav">
-      <div class="container nav-container">
-        <a href="#hero" class="nav-brand" id="brand-logo">
-          <div class="brand-logo-icon">GS</div>
+      <div class="nav-container">
+        <a href="#hero" class="nav-brand" id="brand-logo" title="Gopikiran S | SDE &amp; FSD">
+          <div class="brand-logo-icon" id="nav-brand-logo">
+            <svg class="brand-logo-svg" viewBox="0 0 100 100" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <linearGradient id="brandLogoGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                  <stop offset="0%" class="brand-stop-1" stop-color="var(--accent-violet)" />
+                  <stop offset="100%" class="brand-stop-2" stop-color="var(--accent-cyan)" />
+                </linearGradient>
+                <filter id="brandGlow" x="-20%" y="-20%" width="140%" height="140%">
+                  <feDropShadow dx="0" dy="1.5" stdDeviation="2" flood-color="#000000" flood-opacity="0.35" />
+                </filter>
+              </defs>
+              <!-- Squircle Base with Theme-Reactive Gradient -->
+              <rect x="4" y="4" width="92" height="92" rx="26" ry="26" fill="url(#brandLogoGrad)" />
+              <rect x="5.5" y="5.5" width="89" height="89" rx="24.5" ry="24.5" fill="none" stroke="rgba(255,255,255,0.4)" stroke-width="1.8" />
+              <!-- Architectural Monogram 'GS' -->
+              <g filter="url(#brandGlow)">
+                <!-- Architectural 'G' -->
+                <path d="M 45 33 C 41 24.5 33.5 22.5 26 22.5 C 15.5 22.5 11 31.5 11 50 C 11 68.5 15.5 77.5 26 77.5 C 36 77.5 44 70 45 52 L 28 52" 
+                      fill="none" 
+                      stroke="#FFFFFF" 
+                      stroke-width="9" 
+                      stroke-linecap="round" 
+                      stroke-linejoin="round" />
+                <!-- Fluid Synchronous 'S' -->
+                <path d="M 87 34 C 83.5 25 76.5 22.5 67 22.5 C 57 22.5 53 28.5 53 36.5 C 53 49 87 45.5 87 64 C 87 73.5 80 77.5 68 77.5 C 58 77.5 53 72.5 49 64.5" 
+                      fill="none" 
+                      stroke="#FFFFFF" 
+                      stroke-width="9" 
+                      stroke-linecap="round" 
+                      stroke-linejoin="round" />
+                <circle cx="86" cy="23" r="3.2" fill="#FFFFFF" opacity="0.9" />
+              </g>
+            </svg>
+          </div>
           <span>Gopikiran<span class="highlight-cyan">.dev</span></span>
         </a>
 
@@ -90,11 +130,11 @@
           </div>
 
           <h1 class="hero-title">
-            Hi, I'm <span class="gradient-text">Gopikiran S</span>
+            Hey, I'm <span class="gradient-text">Gopikiran S</span>
           </h1>
 
           <div class="hero-subtitle">
-            I build &amp; scale <span id="typewriter-text" class="highlight-cyan"></span><span class="cursor-blink">|</span>
+            <span id="typewriter-prefix">I am a/an</span> <span id="typewriter-text" class="highlight-cyan"></span><span class="cursor-blink">|</span>
           </div>
 
           <p class="hero-bio">
@@ -108,7 +148,7 @@
               <i class="fas fa-rocket"></i> View Featured Work
             </a>
             <button class="btn-secondary open-resume-btn" id="hero-resume-btn">
-              <i class="fas fa-file-pdf"></i> View &amp; Print Resume
+              <i class="fas fa-file-pdf"></i> View Resume
             </button>
             <a href="#terminal" class="btn-secondary" id="hero-terminal-btn">
               <i class="fas fa-terminal"></i> Open Terminal
@@ -226,7 +266,7 @@
 
           <!-- Project Filter Bar -->
           <div class="projects-filter-bar">
-            <button class="project-filter-btn active" data-filter="all">All Projects (6)</button>
+            <button class="project-filter-btn active" data-filter="all">All Projects (7)</button>
             <button class="project-filter-btn" data-filter="ai-ml">AI &amp; Computer Vision</button>
             <button class="project-filter-btn" data-filter="fullstack">Enterprise Full-Stack</button>
             <button class="project-filter-btn" data-filter="enterprise">Enterprise Automation</button>
@@ -432,12 +472,12 @@
       </section>
     </main>
 
-    <!-- FOOTER -->
+    <!-- FOOTER (Sleek Minimal Design) -->
     <footer class="site-footer">
       <div class="container footer-container">
         <div class="footer-left">
-          <div style="font-weight: 800; font-size: 1.1rem; color: var(--text-primary);">GOPIKIRAN S</div>
-          <div class="footer-copy">&copy; 2026 Gopikiran S. All Rights Reserved. Engineered with precision.</div>
+          <div class="footer-brand">GOPIKIRAN S</div>
+          <div class="footer-copy">&copy; <span id="current-year">2026</span> Gopikiran S &bull; Designed &amp; Engineered with precision.</div>
         </div>
         <div class="nav-controls">
           <button class="nav-btn open-resume-btn"><i class="fas fa-file-pdf"></i> Resume</button>
@@ -464,23 +504,24 @@
   </div>
 
   <!-- ==========================================================================
-       IN-BROWSER PRINTABLE RESUME MODAL
+       OFFICIAL RESUME MODAL (Embedded Official PDF)
        ========================================================================== -->
   <div class="modal-backdrop" id="resume-modal">
-    <div class="modal-window" style="max-width: 900px;">
-      <div class="modal-header-bar">
+    <div class="modal-window" style="max-width: 940px; height: 88vh; display: flex; flex-direction: column;">
+      <div class="modal-header-bar" style="flex-shrink: 0;">
         <div class="modal-title-text"><i class="fas fa-file-pdf highlight-cyan"></i> Gopikiran S — Official Resume</div>
-        <div style="display: flex; gap: 0.5rem; align-items: center;">
-          <button class="btn-primary" id="print-resume-btn" style="padding: 0.4rem 0.85rem; font-size: 0.85rem;">
-            <i class="fas fa-print"></i> Print / Save PDF
-          </button>
+        <div style="display: flex; gap: 0.5rem; align-items: center; flex-wrap: wrap;">
+          <a href="assets/GOPIKIRAN.pdf" target="_blank" download="GOPIKIRAN_S_Resume.pdf" class="btn-primary" style="padding: 0.35rem 0.85rem; font-size: 0.82rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;">
+            <i class="fas fa-download"></i> Download PDF
+          </a>
+          <a href="assets/GOPIKIRAN.pdf" target="_blank" class="btn-secondary" style="padding: 0.35rem 0.85rem; font-size: 0.82rem; text-decoration: none; display: inline-flex; align-items: center; gap: 0.4rem;">
+            <i class="fas fa-arrow-up-right-from-square"></i> Open Tab
+          </a>
           <button class="modal-close-btn" id="resume-modal-close" aria-label="Close Resume"><i class="fas fa-xmark"></i></button>
         </div>
       </div>
-      <div class="modal-content-body">
-        <div id="resume-render-area">
-          <!-- Dynamically populated from portfolio-data.js -->
-        </div>
+      <div class="modal-content-body" style="flex: 1; padding: 0; overflow: hidden; background: #26272b;">
+        <iframe id="resume-pdf-frame" src="assets/GOPIKIRAN.pdf#toolbar=1" style="width: 100%; height: 100%; border: none; display: block;" title="Gopikiran S Official Resume PDF"></iframe>
       </div>
     </div>
   </div>
@@ -489,11 +530,11 @@
   <div id="custom-toast"></div>
 
   <!-- SCRIPTS -->
-  <script src="js/portfolio-data.js"></script>
-  <script src="js/audio.js"></script>
-  <script src="js/particles.js"></script>
-  <script src="js/terminal.js"></script>
-  <script src="js/main.js"></script>
+  <script src="js/portfolio-data.js?v=5.0"></script>
+  <script src="js/audio.js?v=5.0"></script>
+  <script src="js/particles.js?v=5.0"></script>
+  <script src="js/terminal.js?v=5.0"></script>
+  <script src="js/main.js?v=5.0"></script>
 
 </body>
 </html>
